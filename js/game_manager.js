@@ -209,7 +209,7 @@ GameManager.prototype.move = function (direction) {
           }
           else {
             if (next.value >= 4){
-              next.value /= 2;
+              next.value *= 2;
               self.karma--;
               if (self.karma <= 0) self.grid.clearRelationship(false);
               moved = true;
