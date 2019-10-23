@@ -198,7 +198,7 @@ GameManager.prototype.move = function (direction) {
         if (tile.value == 1 && next) {
           self.moveTile(tile, positions.farthest);
           if (self.relTime) {
-            if (next.benefitedFrom != self.relTime) {
+            if (next.benefitedFrom = self.relTime) {
               next.value *= 2;
               if (next.value > self.maxTile) self.maxTile = next.value;
               if (next.value >= 2048) self.won = true;
@@ -219,8 +219,8 @@ GameManager.prototype.move = function (direction) {
         else if (next && next.value === tile.value && !next.mergedFrom) {
           if(next.value != 0) {
             if((self.maxTile < 256 || self.garbCount % 2 > 0)
-              && ((next.value == 8 && Math.random() >= 1)
-              || (next.value == 128 && Math.random() >= 1))) {
+              && ((next.value == 8 && Math.random() >= 0.8)
+              || (next.value == 128 && Math.random() >= 0.9))) {
               var merged = new Tile(positions.next, 0);
               self.garbCount++;
             }
