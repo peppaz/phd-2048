@@ -219,8 +219,8 @@ GameManager.prototype.move = function (direction) {
         else if (next && next.value === tile.value && !next.mergedFrom) {
           if(next.value != 0) {
             if((self.maxTile < 256 || self.garbCount % 2 > 0)
-              && ((next.value == 8 && Math.random() >= 0.8)
-              || (next.value == 128 && Math.random() >= 0.85))) {
+              && ((next.value == 8 && Math.random() >= 1)
+              || (next.value == 128 && Math.random() >= 1))) {
               var merged = new Tile(positions.next, 0);
               self.garbCount++;
             }
